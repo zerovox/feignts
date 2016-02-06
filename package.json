@@ -1,0 +1,24 @@
+{
+  "name": "feignts",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "build": "rm -rf lib/ && mkdir lib && tsc -p .",
+    "prepublish": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "lib",
+    "tsconfig.json"
+  ],
+  "author": "Tim Slatcher",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^1.7.5"
+  },
+  "dependencies": {
+    "uri-templates": "^0.1.9"
+  }
+}

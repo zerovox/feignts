@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "declaration": true,
+    "outDir": "lib",
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "suppressImplicitAnyIndexErrors": true
+  },
+  "exclude": [
+    "build",
+    "bower_components",
+    "node_modules",
+    "lib"
+  ],
+  "compileOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
+  }
+}
