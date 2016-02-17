@@ -1,18 +1,18 @@
-import {FeigntsClient} from './api';
+import {IFeigntsClient} from "./api";
 
-export interface TConstructor<T> {
-  new() : T;
+export interface IConstructor<T> {
+  new(): T;
 }
 
 export default class FeigntsBuilder {
-  private _client : FeigntsClient;
+  private _client : IFeigntsClient;
 
-  client(client : FeigntsClient) {
+  public client(client: IFeigntsClient) {
     this._client = client;
     return this;
   }
 
-  target<T>(clazz : TConstructor<T>, url : string) : T {
+  public target<T>(clazz: IConstructor<T>, url: string) : T {
     let instance = new clazz();
     (instance as any)._feigntsClient = this._client;
     (instance as any)._feigntsUrl = url;

@@ -1,3 +1,3 @@
-export interface FeigntsClient {
-  execute(url : string, payload? : RequestInit) : Promise<any>
+export interface IFeigntsClient<T> {
+  execute(url: string, payload? : RequestInit): T;
 }
